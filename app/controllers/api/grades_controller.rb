@@ -2,7 +2,7 @@ class Api::GradesController < ApplicationController
   before_action :set_grade, only: [:show, :destroy]
   
   def index
-    grades = Grade.all 
+    grades = Grade.all_and_then_some 
 
     render json: grades
   end
@@ -30,7 +30,7 @@ class Api::GradesController < ApplicationController
   end
 
 
-  
+
   private 
 
   def set_grade 

@@ -17,8 +17,8 @@ const Users = (props)=>{
           renderData={(user) => {
             return(
               <Link to={`/users/${user.id}`}>
-                <Card>
-                  <p>{user.name}</p>
+                <Card header={user.name}>
+                  <p>View User</p>
                 </Card>
               </Link>
           )} }
