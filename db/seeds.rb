@@ -23,9 +23,17 @@ Skill.create(name: 'Homework2', description:'Cassino')
 
 # each user will have a grade for each skill
   5.times do |i|
-    Grade.create(user_id: user.id, skill_id: i, score: rand(100))
+    Grade.create(user_id: user.id, skill_id: (i += 1), score: rand(100))
   end
 end
+
+
+Skill.create(name: 'Java', description: 'OOP')
+Skill.create(name: 'Vue', description: 'React component')
+
+
+User.create(name: Faker::Name.name)
+User.create(name: Faker::Name.name)
 
 
 puts "SKILLZZ SIZE: #{Skill.all.length}"

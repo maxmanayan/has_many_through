@@ -9,4 +9,9 @@ class User < ApplicationRecord
       {skill: skill, score: score}
     end
   end
+
+
+  def get_ungraded_skills
+    Skill.all - self.skills
+  end
 end
